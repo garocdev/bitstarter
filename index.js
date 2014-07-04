@@ -13,7 +13,7 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Replace with contents of index.html')
+  response.send(data)
 })
 
 app.listen(app.get('port'), function() {
