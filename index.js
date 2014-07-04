@@ -8,12 +8,15 @@ console.log("read file\n");
 console.log(data);
 });
 
+var buffer = new Buffer();
+buffer = fs.readFile('index.html')
+
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send(data)
+  response.send(buffer.toString("utf-8"))
 })
 
 app.listen(app.get('port'), function() {
