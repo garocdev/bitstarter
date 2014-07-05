@@ -16,7 +16,8 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf-8"))
+//  response.send(buffer.toString("utf-8"))
+  response.send("This is another test")
 })
 
 app.listen(app.get('port'), function() {
